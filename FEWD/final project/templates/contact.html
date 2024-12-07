@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | GameHaven{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section contact-hero">
+    <h1>Contact Us</h1>
+    <p>We value your feedback and questions. Reach out to us below!</p>
+</section>
+
+<!-- Two-Column Layout -->
+<section class="contact-layout">
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form action="/submit-query" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Direct Contact -->
+    <div class="direct-contact">
+        <h2>Contact Us Directly</h2>
+        <div class="contact-details">
+            <p><i class="fa-solid fa-envelope"></i> Email: <a
+                    href="mailto:support@gamehaven.com">support@gamehaven.com</a></p>
+            <p><i class="fa-brands fa-facebook"></i> Facebook: <a href="#">GameHaven</a></p>
+            <p><i class="fa-brands fa-twitter"></i> Twitter: <a href="#">@GameHaven</a></p>
+        </div>
+    </div>
+</section>
+{% endblock %}

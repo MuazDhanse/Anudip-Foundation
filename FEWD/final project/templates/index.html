@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Home | GameHaven{% endblock %}
+
+{% block content %}
+<!-- Section 1: Hero Section -->
+<section class="hero-section">
+    <p>Your ultimate destination for all the games I create...</p>
+    <div class="social-icons">
+        <!-- Social Icons for Hero Section -->
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+</section>
+
+<!-- Section 2 -->
+<section class="my-games">
+    <h2>Games You Can Play</h2>
+    <div class="game-grid">
+        <!-- Game Cards -->
+        <div class="game-card">
+            <div class="game-image">
+                <img src="/static/images/games/ludo.jpeg" alt="Ludo">
+            </div>
+            <div class="game-content">
+                <h3>Ludo King</h3>
+                <p>Throw the dice and move your piece. Play the classic ludo!</p>
+                <button>Play Now</button>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="game-image">
+                <img src="/static/images/games/quiz.jpg" alt="Quiz">
+            </div>
+            <div class="game-content">
+                <h3>Quiz Game</h3>
+                <p>Can you answer my questions correctly? There's only one way to find out.</p>
+                <button>Play Now</button>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="game-image">
+                <img src="/static/images/games/pong.jpg" alt="Pong">
+            </div>
+            <div class="game-content">
+                <h3>Classic Pong</h3>
+                <p>Time for a change. Hop in for a classical pong game.</p>
+                <button>Play Now</button>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="game-image">
+                <img src="/static/images/games/snake.png" alt="Snake">
+            </div>
+            <div class="game-content">
+                <h3>Hungry Snake</h3>
+                <p>For how long can you feed your snake? Let's see.</p>
+                <button>Play Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

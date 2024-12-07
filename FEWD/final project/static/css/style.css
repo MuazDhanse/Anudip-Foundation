@@ -1,0 +1,800 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/* -----------------------
+     Home Page
+----------------------- */
+
+/* Layout Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 80px;
+    height: 100vh;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    height: 60%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    transform: scale(1.2);
+}
+
+/* Right Container */
+.right-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Top Bar Styling */
+.top-bar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.top-bar .logo img {
+    max-width: 180px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.top-bar .logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Main Section Styling */
+.main-section {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 480px;
+    background: url('/static/images/bg.jpg') no-repeat bottom center/cover;
+    color: #fff;
+    padding: 60px;
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 25px;
+}
+
+.hero-section p {
+    width: 40%;
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #dd1412;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: auto;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #ff4f81;
+    transform: scale(1.1);
+}
+
+/* My Games Section */
+.my-games {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.my-games h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff4f81;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Game Card Styling */
+.game-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(145deg, #222, #333);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(255, 255, 255, 0.1) inset;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    gap: 15px;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+.game-card .game-image {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.game-card .game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover .game-image img {
+    transform: scale(1.1);
+}
+
+.game-card .game-content h3 {
+    font-size: 1.5rem;
+    margin: 10px;
+    color: #ff4f81;
+}
+
+.game-card .game-content p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.game-card button {
+    background: #ff4f81;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+.game-card button:hover {
+    background-color: #ff2a62;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional Overlay Effect */
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.game-card:hover::before {
+    opacity: 1;
+}
+
+.game-card .game-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* -----------------------
+     About Page
+----------------------- */
+
+/* Hero Section for About Page */
+.about-hero {
+    background: url('/static/images/about.jpg') no-repeat center center/cover;
+    height: 300px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Animated Overlay Effect */
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+    z-index: 1;
+}
+
+.about-hero h1,
+.about-hero p {
+    position: relative;
+    z-index: 2;
+    animation: slideUp 1s ease forwards;
+}
+
+.about-hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+    color: #ff4f81;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* About Description */
+.about-description {
+    margin: 20px 0;
+    padding: 20px;
+    background: linear-gradient(145deg, #222, #333);
+    border-radius: 15px;
+    color: #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-description:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+.about-description h2 {
+    color: #ff4f81;
+    margin-bottom: 15px;
+}
+
+/* Tech Stack */
+.tech-stack {
+    margin: 20px 0;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.tech-stack ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+}
+
+.tech-stack li {
+    background: #333;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #ff4f81;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-stack li:hover {
+    transform: scale(1.1);
+    background-color: #444;
+}
+
+/* Achievements Section */
+.achievements {
+    margin: 20px 0;
+    padding: 20px;
+    background: #222;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.8s ease-in-out;
+}
+
+.achievement-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.achievement-item {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+.achievement-item h3 {
+    color: #ff4f81;
+    margin-bottom: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* -----------------------
+      Community Page
+----------------------- */
+
+/* Hero Section for Community Page */
+.community-hero {
+    background: url('/static/images/community.jpg') no-repeat center center/cover;
+    height: 350px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.2s ease-in-out;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.community-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #ff4f81;
+    animation: slideInFromLeft 1s ease;
+}
+
+.community-hero p {
+    font-size: 1.4rem;
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.6;
+    animation: slideInFromRight 1s ease;
+}
+
+.explore-btn {
+    margin-top: 20px;
+    background: #ff4f81;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.explore-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Discussion Forum */
+.discussion-forum {
+    margin: 30px 20px;
+    padding: 20px;
+    background: #222;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    animation: fadeInUp 1.2s ease;
+}
+
+.forum-threads .thread {
+    background: linear-gradient(145deg, #333, #444);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.forum-threads .thread:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Community Events */
+.community-events {
+    margin: 30px 20px;
+    padding: 20px;
+    background: linear-gradient(145deg, #222, #333);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    color: #ddd;
+}
+
+/* Join Community */
+.join-community {
+    margin: 30px 20px;
+    text-align: center;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.join-community h2 {
+    color: #ff4f81;
+    margin-bottom: 15px;
+}
+
+.join-community button {
+    background: linear-gradient(to right, #ff4f81, #ff2a62);
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.join-community button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to right, #ff2a62, #ff4f81);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+/* -----------------------
+      Contact Page
+----------------------- */
+
+/* Hero Section for Contact Page */
+.contact-hero {
+    background: url('/static/images/contact.jpg') no-repeat center center/cover;
+    height: 300px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff4f81;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Two-Column Layout */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px; /* Spacing between columns */
+    margin: 30px 20px;
+    align-items: start; /* Aligns sections to the top */
+}
+
+/* Contact Form Styling */
+.contact-form {
+    padding: 25px;
+    background: linear-gradient(145deg, #222, #333);
+    border-radius: 15px;
+    color: #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form h2 {
+    color: #ff4f81;
+    margin-bottom: 15px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+    outline: none;
+    border: 2px solid #ff4f81;
+    background: #444;
+}
+
+.contact-form button {
+    background: #ff4f81;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #ff2a62;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Direct Contact Section Styling */
+.direct-contact {
+    padding: 25px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.direct-contact h2 {
+    color: #ff4f81;
+    margin-bottom: 15px;
+}
+
+.direct-contact .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.direct-contact .contact-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.direct-contact .contact-details i {
+    font-size: 1.2rem;
+    color: #ff4f81;
+}
+
+.direct-contact a {
+    color: #ff4f81;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.direct-contact a:hover {
+    color: #ff2a62;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr; /* Stacks sections vertically */
+    }
+
+    .contact-form,
+    .direct-contact {
+        width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* -----------------------
+        Footer
+----------------------- */
+
+.footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-social-icons a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    color: #ff4f81;
+    transform: scale(1.2);
+}
